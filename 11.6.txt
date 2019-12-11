@@ -1,0 +1,30 @@
+//Дано целое число N (> 1), являющееся числом Фибоначчи: N = FK. Найти целое число K — порядковый номер числа Фибоначчи N.
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+  int a, b, N, K, i;
+  cout << "N=";
+  cin >> N;
+  if (N > 1)
+  {
+      K=0;
+      a=0;
+      b=1;
+      while ((a<=N) || (b<=N))
+      {
+      if (a > b)
+      {
+       K=K+1;
+       b=b+a;
+      }
+      else
+      {
+          K=K+1;
+          a=a+b;
+      }
+      }
+  }
+  cout << "K=" << K;
+}

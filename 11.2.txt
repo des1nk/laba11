@@ -1,0 +1,20 @@
+//Даны положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Не используя операции умножения и деления, найти длину незанятой части отрезка A.
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+  float A, B;
+  cout << "A=";
+  cin >> A;
+  cout << "B=";
+  cin >> B;
+  if ( A > B > 0 )
+  {
+      while (A > B)
+      {
+          A=A-B;
+      }
+      cout << "Nezanyataya chast' = " << A;
+  }
+}
